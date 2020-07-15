@@ -247,5 +247,254 @@
         ]
       }
     ]
+  },
+  {
+    "exam": "Agrani Bank PO Exam",
+    "duration": 1,
+    "version": "English",
+    "subjects": [
+      {
+        "subject": "General Knowledge",
+        "currentIndex": 0,
+        "questions": [
+          {
+            "question": "How many days are there in a year?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "365"
+              },
+              {
+                "slug": "B",
+                "option": "366"
+              },
+              {
+                "slug": "C",
+                "option": "367"
+              },
+              {
+                "slug": "D",
+                "option": "368"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 0
+          },
+          {
+            "question": "Which animal is known as the ‘Ship of the Desert?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Goat"
+              },
+              {
+                "slug": "B",
+                "option": "Camel"
+              },
+              {
+                "slug": "C",
+                "option": "Tiger"
+              },
+              {
+                "slug": "D",
+                "option": "Hen"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 1
+          },
+          {
+            "question": "How many letters are there in the English alphabet?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "10"
+              },
+              {
+                "slug": "B",
+                "option": "12"
+              },
+              {
+                "slug": "C",
+                "option": "14"
+              },
+              {
+                "slug": "D",
+                "option": "26"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 3
+          },
+          {
+            "question": "How many sides are there in a triangle?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "3"
+              },
+              {
+                "slug": "B",
+                "option": "4"
+              },
+              {
+                "slug": "C",
+                "option": "2"
+              },
+              {
+                "slug": "D",
+                "option": "5"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 0
+          },
+          {
+            "question": "n which direction does the sun rise?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "North"
+              },
+              {
+                "slug": "B",
+                "option": "South"
+              },
+              {
+                "slug": "C",
+                "option": "East"
+              },
+              {
+                "slug": "D",
+                "option": "West"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 2
+          }
+        ]
+      },
+      {
+        "subject": "intelligence quotient",
+        "currentIndex": 0,
+        "questions": [
+          {
+            "question": "What type of gas do plants absorb?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Carbon Dioxide"
+              },
+              {
+                "slug": "B",
+                "option": "Hydrogen"
+              },
+              {
+                "slug": "C",
+                "option": "Oxygen"
+              },
+              {
+                "slug": "D",
+                "option": "Nitrus Oxide"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 0
+          },
+          {
+            "question": "How many years are there in one Millenium?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "100"
+              },
+              {
+                "slug": "B",
+                "option": "1000"
+              },
+              {
+                "slug": "C",
+                "option": "10000"
+              },
+              {
+                "slug": "D",
+                "option": "2000"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 1
+          },
+          {
+            "question": "Which way is anti-clockwise?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Right"
+              },
+              {
+                "slug": "B",
+                "option": "Up"
+              },
+              {
+                "slug": "C",
+                "option": "Down"
+              },
+              {
+                "slug": "D",
+                "option": "Left"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 3
+          },
+          {
+            "question": "How many equal sides does an isosceles triangle have?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "1"
+              },
+              {
+                "slug": "B",
+                "option": "2"
+              },
+              {
+                "slug": "C",
+                "option": "3"
+              },
+              {
+                "slug": "D",
+                "option": "0"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 1
+          },
+          {
+            "question": "Which is the principal source of energy for earth?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Pluto"
+              },
+              {
+                "slug": "B",
+                "option": "Moon"
+              },
+              {
+                "slug": "C",
+                "option": "Mars"
+              },
+              {
+                "slug": "D",
+                "option": "Sun"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 3
+          }
+        ]
+      }
+    ]
   }
 ]
