@@ -1,5 +1,6 @@
 <template>
   <div id="quiz">
+    <h2 style="text-align: center">{{ exam.exam }}</h2>
     <b-container>
       <b-row>
         <b-col sm="12" md="8" lg="8" xl="8">

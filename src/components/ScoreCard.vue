@@ -1,5 +1,6 @@
 <template>
   <div id="score_card">
+    <h3 style="text-align: center">{{ exam.exam }}</h3>
     <div class="score-card">
       <h5>Your Mark Sheet</h5>
       <div class="summary-title">
@@ -17,7 +18,7 @@
               <th scope="col">Subject</th>
               <th scope="col">Total Questions</th>
               <th scope="col">Correct</th>
-              <th scope="col">Wrong</th>
+              <th scope="col">Wrong/Unanswered</th>
               <th scope="col">Mark Obtained</th>
             </tr>
           </thead>

@@ -1,6 +1,6 @@
 [
   {
-    "exam": "Agrani Bank PO",
+    "exam": "Prime Bank Ltd SVP Exam",
     "duration": 1,
     "version": "English",
     "subjects": [
@@ -9,102 +9,240 @@
         "currentIndex": 0,
         "questions": [
           {
-            "question": "What is the capital of Bangladesh",
+            "question": "How many days are there in a year?",
             "options": [
               {
                 "slug": "A",
-                "option": "Dhaka"
+                "option": "365"
               },
               {
                 "slug": "B",
-                "option": "Rajshahi"
+                "option": "366"
               },
               {
                 "slug": "C",
-                "option": "Khulna"
+                "option": "367"
               },
               {
                 "slug": "D",
-                "option": "Barishal"
+                "option": "368"
               }
             ],
             "selectedOptionIdx": -1,
             "answer": 0
           },
           {
-            "question": "What is the capital of India",
+            "question": "Which animal is known as the ‘Ship of the Desert?",
             "options": [
               {
                 "slug": "A",
-                "option": "Delhi"
+                "option": "Goat"
               },
               {
                 "slug": "B",
-                "option": "Rajshahi"
+                "option": "Camel"
               },
               {
                 "slug": "C",
-                "option": "Khulna"
+                "option": "Tiger"
               },
               {
                 "slug": "D",
-                "option": "Barishal"
+                "option": "Hen"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 1
+          },
+          {
+            "question": "How many letters are there in the English alphabet?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "10"
+              },
+              {
+                "slug": "B",
+                "option": "12"
+              },
+              {
+                "slug": "C",
+                "option": "14"
+              },
+              {
+                "slug": "D",
+                "option": "26"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 3
+          },
+          {
+            "question": "How many sides are there in a triangle?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "3"
+              },
+              {
+                "slug": "B",
+                "option": "4"
+              },
+              {
+                "slug": "C",
+                "option": "2"
+              },
+              {
+                "slug": "D",
+                "option": "5"
               }
             ],
             "selectedOptionIdx": -1,
             "answer": 0
-          }
-        ]
-      },
-      {
-        "subject": "English",
-        "currentIndex": 0,
-        "questions": [
+          },
           {
-            "question": "What is the capital of England",
+            "question": "n which direction does the sun rise?",
             "options": [
               {
                 "slug": "A",
-                "option": "Dhaka"
+                "option": "North"
               },
               {
                 "slug": "B",
-                "option": "Rajshahi"
+                "option": "South"
               },
               {
                 "slug": "C",
-                "option": "Khulna"
+                "option": "East"
               },
               {
                 "slug": "D",
-                "option": "Barishal"
+                "option": "West"
               }
             ],
             "selectedOptionIdx": -1,
             "answer": 2
-          },
+          }
+        ]
+      },
+      {
+        "subject": "intelligence quotient",
+        "currentIndex": 0,
+        "questions": [
           {
-            "question": "What is the capital of Bangladesh",
+            "question": "What type of gas do plants absorb?",
             "options": [
               {
                 "slug": "A",
-                "option": "Dhaka"
+                "option": "Carbon Dioxide"
               },
               {
                 "slug": "B",
-                "option": "Rajshahi"
+                "option": "Hydrogen"
               },
               {
                 "slug": "C",
-                "option": "Khulna"
+                "option": "Oxygen"
               },
               {
                 "slug": "D",
-                "option": "Barishal"
+                "option": "Nitrus Oxide"
               }
             ],
             "selectedOptionIdx": -1,
             "answer": 0
+          },
+          {
+            "question": "How many years are there in one Millenium?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "100"
+              },
+              {
+                "slug": "B",
+                "option": "1000"
+              },
+              {
+                "slug": "C",
+                "option": "10000"
+              },
+              {
+                "slug": "D",
+                "option": "2000"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 1
+          },
+          {
+            "question": "Which way is anti-clockwise?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Right"
+              },
+              {
+                "slug": "B",
+                "option": "Up"
+              },
+              {
+                "slug": "C",
+                "option": "Down"
+              },
+              {
+                "slug": "D",
+                "option": "Left"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 3
+          },
+          {
+            "question": "How many equal sides does an isosceles triangle have?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "1"
+              },
+              {
+                "slug": "B",
+                "option": "2"
+              },
+              {
+                "slug": "C",
+                "option": "3"
+              },
+              {
+                "slug": "D",
+                "option": "0"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 1
+          },
+          {
+            "question": "Which is the principal source of energy for earth?",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Pluto"
+              },
+              {
+                "slug": "B",
+                "option": "Moon"
+              },
+              {
+                "slug": "C",
+                "option": "Mars"
+              },
+              {
+                "slug": "D",
+                "option": "Sun"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 3
           }
         ]
       }

@@ -15,11 +15,11 @@
               <b-col md="6">
                 <b-card-body :title="ex.exam">
                   <b-card-text>
-                    Agrani Bank Ltd recruitement test.
-                  </b-card-text>
-                  <b-card-text>
                     {{ ex.subjects.length }} Subjects |
                     {{ ex.duration }} Minutes
+                  </b-card-text>
+                  <b-card-text>
+                    by EduHive Originals
                   </b-card-text>
                   <b-button @click="takeExam(index)" variant="primary"
                     >Perticipate Exam</b-button
