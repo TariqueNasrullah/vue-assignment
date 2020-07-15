@@ -1,0 +1,113 @@
+[
+  {
+    "exam": "Agrani Bank PO",
+    "duration": 1,
+    "version": "English",
+    "subjects": [
+      {
+        "subject": "General Knowledge",
+        "currentIndex": 0,
+        "questions": [
+          {
+            "question": "What is the capital of Bangladesh",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Dhaka"
+              },
+              {
+                "slug": "B",
+                "option": "Rajshahi"
+              },
+              {
+                "slug": "C",
+                "option": "Khulna"
+              },
+              {
+                "slug": "D",
+                "option": "Barishal"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 0
+          },
+          {
+            "question": "What is the capital of India",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Delhi"
+              },
+              {
+                "slug": "B",
+                "option": "Rajshahi"
+              },
+              {
+                "slug": "C",
+                "option": "Khulna"
+              },
+              {
+                "slug": "D",
+                "option": "Barishal"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "subject": "English",
+        "currentIndex": 0,
+        "questions": [
+          {
+            "question": "What is the capital of England",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Dhaka"
+              },
+              {
+                "slug": "B",
+                "option": "Rajshahi"
+              },
+              {
+                "slug": "C",
+                "option": "Khulna"
+              },
+              {
+                "slug": "D",
+                "option": "Barishal"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 2
+          },
+          {
+            "question": "What is the capital of Bangladesh",
+            "options": [
+              {
+                "slug": "A",
+                "option": "Dhaka"
+              },
+              {
+                "slug": "B",
+                "option": "Rajshahi"
+              },
+              {
+                "slug": "C",
+                "option": "Khulna"
+              },
+              {
+                "slug": "D",
+                "option": "Barishal"
+              }
+            ],
+            "selectedOptionIdx": -1,
+            "answer": 0
+          }
+        ]
+      }
+    ]
+  }
+]
