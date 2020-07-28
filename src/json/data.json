@@ -7,6 +7,7 @@
       {
         "subject": "General Knowledge",
         "currentIndex": 0,
+        "answered": 0,
         "questions": [
           {
             "question": "How many days are there in a year?",
@@ -128,6 +129,7 @@
       {
         "subject": "intelligence quotient",
         "currentIndex": 0,
+        "answered": 0,
         "questions": [
           {
             "question": "What type of gas do plants absorb?",
@@ -256,6 +258,7 @@
       {
         "subject": "General Knowledge",
         "currentIndex": 0,
+        "answered": 0,
         "questions": [
           {
             "question": "How many days are there in a year?",
@@ -377,6 +380,7 @@
       {
         "subject": "intelligence quotient",
         "currentIndex": 0,
+        "answered": 0,
         "questions": [
           {
             "question": "What type of gas do plants absorb?",

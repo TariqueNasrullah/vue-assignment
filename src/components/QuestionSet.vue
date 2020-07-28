@@ -11,7 +11,7 @@
                 :key="subjectIdx"
               >
                 <template v-slot:title
-                  >{{ subject.subject }} ({{ subject.currentIndex + 1 }} /
+                  >{{ subject.subject }} ({{ subject.answered }} /
                   {{ subject.questions.length }})</template
                 >
                 <div>

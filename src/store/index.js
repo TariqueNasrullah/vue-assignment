@@ -20,10 +20,12 @@ export default new Vuex.Store({
         state.exams[payload.examidx].subjects[payload.subidx].questions[
           payload.quesidx
         ].selectedOptionIdx = -1
+        state.exams[payload.examidx].subjects[payload.subidx].answered -= 1
       } else {
         state.exams[payload.examidx].subjects[payload.subidx].questions[
           payload.quesidx
         ].selectedOptionIdx = payload.optidx
+        state.exams[payload.examidx].subjects[payload.subidx].answered += 1
       }
     },
     PREVIOUS(state, payload) {
