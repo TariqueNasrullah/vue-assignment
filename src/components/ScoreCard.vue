@@ -1,168 +1,133 @@
 <template>
-  <div id="score_card">
-    <h3 style="text-align: center">{{ exam.exam }}</h3>
-    <div class="score-card">
-      <h5>Your Mark Sheet</h5>
-      <div class="summary-title">
-        Total Marks: {{ totalMarks }} Total Obtained: {{ obtained }} ({{
-          (obtained * 100) / totalMarks
-        }})%
-      </div>
-      <div class="summary-title">
-        Duration: {{ hour }} : {{ minute }} : {{ second }}
-      </div>
-      <b-container>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Subject</th>
-              <th scope="col">Total Questions</th>
-              <th scope="col">Correct</th>
-              <th scope="col">Wrong/Unanswered</th>
-              <th scope="col">Mark Obtained</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(subject, index) in resultSheet" :key="index">
-              <th scope="row">{{ subject.subjectName }}</th>
-              <td>{{ subject.questionCount }}</td>
-              <td>{{ subject.correctAnswer }}</td>
-              <td>{{ subject.incorrectAnswer }}</td>
-              <td>{{ subject.marksObtained }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Total</th>
-              <td>{{ totalMarks }}</td>
-              <td>{{ obtained }}</td>
-              <td>{{ totalMarks - obtained }}</td>
-              <td>{{ obtained }} ({{ (obtained * 100) / totalMarks }})%</td>
-            </tr>
-          </tbody>
-        </table>
-      </b-container>
-      <div class="summary">
-        <b-button block variant="primary" @click="downloadJson"
-          >Generate Json file</b-button
-        >
-      </div>
+  <div class="text-center">
+    <h1 class="display-4">Results</h1>
+    <p class="lead">
+      Congrats on your results! If you don't like your results down below, feel
+      free to take the quiz again!
+    </p>
+
+    <h1 class="Quiz">{{ examTitle }}</h1>
+    <h2 class="Name">Anonymous</h2>
+
+    <div class="table">
+      <b-table :items="items"></b-table>
     </div>
-    <a id="downloadAnchorElem" style="display:none"></a>
+
+    <div class="result">
+      <p>
+        Correct:
+        <strong>{{ totalCorrect }}</strong>
+      </p>
+    </div>
+
+    <div class="result">
+      <p>
+        Marks Deducted:
+        <strong>{{ totalWrong }}</strong>
+      </p>
+    </div>
+
+    <div class="result">
+      <p>
+        Total:
+        <strong>{{ totalMarks }}/{{ TotalQuestions }}</strong>
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ScoreCard',
-  props: ['examIdx', 'remainingTime'],
-  data: function() {
+  props: ['examIdx'],
+  name: 'student_marks',
+  data() {
     return {
+      items: [],
+      totalCorrect: 0,
+      totalWrong: 0,
       totalMarks: 0,
-      obtained: 0,
-      resultSheet: []
-    }
-  },
-  computed: {
-    exam() {
-      return this.$store.state.exams[this.examIdx]
-    },
-    hour() {
-      var timeTaken = this.exam.duration * 60 - parseInt(this.remainingTime)
-      return Math.floor(timeTaken / (60 * 60))
-    },
-    minute() {
-      var timeTaken = this.exam.duration * 60 - parseInt(this.remainingTime)
-      timeTaken %= 60 * 60
-      return Math.floor(timeTaken / 60)
-    },
-    second() {
-      var timeTaken = this.exam.duration * 60 - parseInt(this.remainingTime)
-      timeTaken %= 60 * 60
-      timeTaken %= 60
-      return timeTaken
-    }
-  },
-  methods: {
-    downloadJson: function() {
-      var dataStr =
-        'data:text/json;charset=utf-8,' +
-        encodeURIComponent(JSON.stringify(this.$store.state.exams))
-      var downloadAnchorNode = document.createElement('a')
-      downloadAnchorNode.setAttribute('href', dataStr)
-      downloadAnchorNode.setAttribute('download', 'data.json')
-      document.body.appendChild(downloadAnchorNode) // required for firefox
-      downloadAnchorNode.click()
-      downloadAnchorNode.remove()
+      TotalQuestions: 0
     }
   },
   mounted() {
-    // Calculate total marks
-    var tmarks = 0
-    this.exam.subjects.forEach(subject => {
-      tmarks += subject.questions.length
+    var examid = this.examIdx
+    var exam = this.$store.state.exams[examid]
 
-      // Calculate resultsheet
-      var questionCount = subject.questions.length
-      var subjectName = subject.subject
-      var correctAnswer = 0
-      var incorrectAnswer = 0
-      // Calculate obtained Marks
-      subject.questions.forEach(question => {
-        if (question.answer === question.selectedOptionIdx) {
-          this.obtained++
-          correctAnswer++
+    exam.subjects.forEach(subject => {
+      var item = {
+        SubjectName: '',
+        TotalQuestions: 0,
+        Untouched: 0,
+        Wrong: 0,
+        Correct: 0,
+        MarksLost: 0,
+        Total: 0,
+        Percentage: 0,
+        HighestMarks: 0,
+        Status: ''
+      }
+      item.SubjectName = subject.subject
+      item.TotalQuestions = subject.questions.length
+
+      // calc untouched
+      subject.questions.forEach(ques => {
+        if (ques.selectedOptionIdx === -1) {
+          item.Untouched++
+        } else if (ques.selectedOptionIdx != ques.answer) {
+          item.Wrong++
+        } else {
+          item.Correct++
         }
       })
-      incorrectAnswer = questionCount - correctAnswer
-      this.resultSheet.push({
-        subjectName,
-        questionCount,
-        correctAnswer,
-        incorrectAnswer,
-        marksObtained: correctAnswer
-      })
+
+      item.MarksLost = item.Wrong * 0.25
+      item.Total = item.Correct - item.MarksLost
+      item.Percentage = Math.round(
+        ((item.Correct - item.MarksLost) / item.TotalQuestions) * 100
+      )
+      item.HighestMarks = Math.max(
+        item.Total,
+        Math.floor(Math.random() * item.TotalQuestions)
+      )
+      if (item.Percentage < 70) {
+        item.Status = 'Need Improvement!'
+      } else {
+        item.Status = 'Perfect!'
+      }
+      this.items.push(item)
     })
-    this.totalMarks = tmarks
+    this.items.forEach(item => {
+      this.totalCorrect += item.Correct
+      this.totalWrong += item.MarksLost
+      this.totalMarks += item.Total
+      this.TotalQuestions += item.TotalQuestions
+    })
+  },
+  computed: {
+    examTitle() {
+      return this.$store.state.exams[this.examIdx].exam
+    }
   }
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-$primary_color: rgb(0, 22, 121);
-
-.score-card {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  h5 {
-    text-align: center;
+.result {
+  p {
+    font-size: 1.2em;
+    margin-left: 35%;
+    margin-bottom: 0;
+    padding: 0;
   }
-  .summary-title {
-    color: $primary_color;
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 0.25rem 1rem;
-    margin: 1rem 0;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    font-weight: 600;
-  }
-  .summary {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-
-    .summary-body {
-      background-color: rgba(201, 201, 201, 0.1);
-      padding: 1rem 1rem;
-      border-radius: 8px;
-      p {
-        margin: 0;
-      }
-    }
+}
+.table {
+  width: 70%;
+  /* margin-left: 15%; */
+  margin: 0 auto;
+  overflow: scroll;
+  @media (max-width: 550px) {
+    width: 95%;
   }
 }
 </style>
